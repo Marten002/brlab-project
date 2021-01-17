@@ -9,13 +9,15 @@
 
     background-color: $color-white;
 
-    padding: 0 20px;
+    //padding: 0 20px;
 
     font-family: $font-ttnorms;
     font-style: normal;
     font-weight: 500;
     font-size: 13px;
     line-height: 15px;
+
+    border-top: 1px solid $color-white--dark;
 
     &-time {
         color: $color-grey;
