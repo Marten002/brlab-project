@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 
 import { Routes } from '../../routes'
 
@@ -13,7 +13,8 @@ import Forecast from '../../components/Forecast/Forecast'
 
 import './Home.scss'
 
-const Home = ({ component }) => {
+const Home = () => {
+    console.log('rerender home')
     return (
         <main className="home">
             <div className="home__container">
@@ -28,7 +29,7 @@ const Home = ({ component }) => {
                             <BreadcrumbItem caption="Матч центр" path={Routes.match} active={true}/>
                         </Breadcrumb>
                     </Container>
-                    <TabVariants component={component}/>
+                    <TabVariants/>
                 </Container>
                 <Container className="container--aside">
                     <Promotion/>
@@ -40,4 +41,4 @@ const Home = ({ component }) => {
     )
 }
 
-export default Home
+export default memo(Home)

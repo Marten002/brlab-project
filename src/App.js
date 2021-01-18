@@ -19,31 +19,22 @@ const App = () => {
                     <Header/>
                     <Switch>
                         <Route exact path={Routes.index}>
-                            <Home component="football"/>
-                        </Route>
-                        <Route exact path={Routes.page.footballIndex}>
-                            <Home component="football"/>
+                            <Home/>
                         </Route>
                         <Route path={Routes.page.football}>
-                            <Home component="football"/>
-                        </Route>
-                        <Route exact path={Routes.page.hockeyIndex}>
-                            <Home component="hockey"/>
+                            <Home/>
                         </Route>
                         <Route path={Routes.page.hockey}>
-                            <Home component="hockey"/>
-                        </Route>
-                        <Route exact path={Routes.page.tennisIndex}>
-                            <Home component="tennis"/>
+                            <Home/>
                         </Route>
                         <Route path={Routes.page.tennis}>
-                            <Home component="tennis"/>
-                        </Route>
-                        <Route exact path={Routes.page.basketballIndex}>
-                            <Home component="basketball"/>
+                            <Home/>
                         </Route>
                         <Route path={Routes.page.basketball}>
-                            <Home component="basketball"/>
+                            <Home/>
+                        </Route>
+                        <Route exact path={Routes.auth.entry}>
+                            sing in
                         </Route>
                     </Switch>
                     <Footer/>

@@ -13,30 +13,36 @@ const Menu = ({ page }) => {
         {
             name: 'Все',
             path: Routes.type.all,
+            className: location.pathname === Routes.index ? 'menu__link--active' : '',
             badge: '127'
         },
         {
             name: 'Live',
             path: Routes.type.live,
+            className: '',
             badge: '2'
         },
         {
             name: 'Завершенные',
             path: Routes.type.completed,
+            className: '',
             badge: '57'
         },
         {
             name: 'Запланированные',
             path: Routes.type.planned,
+            className: '',
             badge: '73'
         },
         {
             name: 'С прогнозами',
             path: Routes.type.forecast,
+            className: '',
         },
         {
             name: 'Лучшие коэффиценты',
             path: Routes.type.best,
+            className: '',
         },
     ]
 
@@ -50,7 +56,7 @@ const Menu = ({ page }) => {
                                 <Link
                                     key={index}
                                     to={page + item.path}
-                                    className={`menu__link ${page + item.path === location.pathname ? 'menu__link--active' : ''}`}
+                                    className={`menu__link ${page + item.path === location.pathname ? 'menu__link--active' : ''} ${item.className}`}
                                 >
                                     {item.name}
                                     {

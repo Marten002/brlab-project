@@ -19,8 +19,8 @@ const TableBody = ({ data }) => {
                 data.map((item, index) => {
                     const { person, fromTime, watchTrigger, lostTime } = item
                     return (
-                        <Container className="container--table">
-                            <div key={index} className="table__body">
+                        <Container key={index} className="container--table">
+                            <div className="table__body">
                                 <img
                                     src={person}
                                     alt="imageTable"

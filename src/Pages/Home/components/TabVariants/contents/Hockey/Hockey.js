@@ -750,9 +750,9 @@ const Hockey = () => {
     ]
 
     return (
-        <div className="page page--football">
+        <div className="page page--hockey">
             <Headline className="headline--page" caption="Топ матчи"/>
-            <Slider className="slider--football" slides={slides}/>
+            <Slider className="slider--hockey" slides={slides}/>
             <div className="page__menu">
                 <Menu page={Routes.page.hockey}/>
                 <Select items={dateList}/>

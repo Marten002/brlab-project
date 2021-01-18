@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link, useLocation } from 'react-router-dom'
 
+import { handleResolvePathname } from '../../../../utils'
+
 import Badge from '../../../Badge/Badge'
 
 import './TabMenu.scss'
@@ -21,7 +23,7 @@ const TabMenu = ({ items, configuration }) => {
                         <Link
                             key={index}
                             to={item.path}
-                            className={`tab__link ${item.path === location.pathname ? 'tab__link--active' : ''} ${item.className}`}
+                            className={`tab__link ${`/${(item.path.split('/'))[1]}` === handleResolvePathname(location.pathname) ? 'tab__link--active' : ''} ${item.className}`}
                         >
                             {
                                 icon &&
